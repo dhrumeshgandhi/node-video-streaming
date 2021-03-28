@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: "video-streaming",
-    script: 'index.ts',
+    script: 'index.js',
     watch: true,
     increment_var : 'NODE_PORT',
     env: {
