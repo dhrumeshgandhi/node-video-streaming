@@ -1,8 +1,18 @@
 const fs = require("fs");
 const express = require("express");
+const { stringReplace } = require('string-replace-middleware');
 
-const port = parseInt(process.env["NODE_PORT"]) || 3000;
+const port = parseInt(process.env["NODE_PORT"]);
+console.log(`PORT: ${port}!`); 
 const app = express();
+
+app.use(stringReplace({
+    '%%HTML_TITLE%%': `Video on ${port}`,
+}));
+
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "/public/index.html");
+});
 
 app.get("/video", function (req, res) {
   // Ensure there is a range given for the video
