@@ -1,5 +1,5 @@
-import fs from "fs";
-import express from "express";
+const fs = require("fs");
+const express = require("express");
 
 const port = parseInt(process.env["NODE_PORT"]) || 3000;
 const app = express();
