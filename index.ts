@@ -2,7 +2,7 @@ const fs = require("fs");
 const express = require("express");
 const { stringReplace } = require('string-replace-middleware');
 
-const port = parseInt(process.env["NODE_PORT"]);
+const port = parseInt(process.env["NODE_PORT"]) || 3000;
 console.log(`PORT: ${port}!`); 
 const app = express();
 
