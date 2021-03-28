@@ -12,7 +12,7 @@ module.exports = {
       NODE_ENV: "prod",
       NODE_PORT: 3000
     },
-    instances: -1,
+    instances: 2,
     exec_mode: "cluster"
   }]
 };
